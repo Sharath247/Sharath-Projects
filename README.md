@@ -1,25 +1,12 @@
-# AWS Project - End to End Web application deployment
+# JENKINS CICD PIPELINE
+Client Name: Mercedes Benz
+Project Name: DMS [Dealer Management System]
+Mercedes Benz dealer onboarding applications were handled by the DevOps/SRE team, the 16 microservices were onboarded into the CICD pipeline with end to end integration of all tools where we had various suites like Security, build, docker, ansible, and K8 deployment. The Jenkins shared library along with the Jenkinsfile design for each microservice was done by both in an individual contribution and as a team work.
 
-•	Set up a Virtual Private Cloud (VPC) in AWS
-
-•	Configured subnets within the VPC to define network segments for different components of infrastructure.
-
-•	Established route tables and an internet gateway to enable communication between VPC and the internet
-
-•	Associated the route tables, internet gateway, and subnets to allow proper network traffic flow within my VPC
-
-•	Launched an EC2 instance, which is a virtual server in the AWS cloud
-
-•	Installed the Apache2 web server software on the EC2 instance to host my application
-
-•	Cloned my application's source code from GitHub and moved it to the appropriate directory (/var/www/html) on the EC2 instance. This typically involves deleting the default index.html file.
-
-•	Acquired a domain name from a domain registrar
-
-•	Set up a hosted zone in AWS Route 53 with domain name
-
-•	Obtained the name server (NS) records from the AWS Route 53 hosted zone and updated the domain provider's settings to use those NS records.
-
-•	Added an A record in AWS Route 53 hosted zone to map your domain name to the IP address of your EC2 instance.
-
-•	Browsed Application with the Domain Name
+-	Integrated all tools with the Jenkins and designed various automation scripts in shell and python to check the various stages conditions in pipeline
+-	Sonarqube QG was checked with shell script for each module and each microservice was on boarded to sonar
+-	Automation of GITLAB/SONAR/JENKINS rest APIs was done.
+-	Maintained the build servers of Jenkins where we had docker installed which converted the Jar into image
+-	Jfrog rest api automation for cleanup of old binaries was done
+-	Kubernetes manifest file design as per the development teams was handled where we had various kinds of deployments, daemonset, services etc.
+-	Troubleshooting the pod deployment along with RCA was performed
